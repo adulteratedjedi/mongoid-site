@@ -28,6 +28,14 @@ category: docs
         Person.find(:all, :conditions => { :first_name => "Syd" })
 
   %br
+  Finding all documents given some conditions with Regular Expression:
+  %pre
+    %code
+      :preserve
+        Person.all(:conditions => { :first_name => /^sy/i })
+        Person.find(:all, :conditions => { :first_name => /^sy/i })
+
+  %br
   Find the first document given some conditions:
   %pre
     %code
